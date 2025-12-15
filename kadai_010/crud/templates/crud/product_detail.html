@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品一覧</title>
+</head>
+<body>
+    <h1>商品一覧</h1>
+
+    <table border="1">
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+        </tr>
+        <tr>
+            <td>{{ object.name }}</td>
+            <td>{{ object.price }}円</td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="{% url 'top' %}">戻る</a>
+    
+</body>
+</html>

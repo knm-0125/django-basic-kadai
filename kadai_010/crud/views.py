@@ -1,10 +1,13 @@
-from django.shortcuts import render
-
-from django.views.generic import TemplateView
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, Detailview
+from .models import Product
 
 class TopView("TemplateView"):
     template_name = "top.html"
 
-    class ProductListView(ListView):
+class ProductListView(ListView):
         model = Product
+        template_name = "crud/product_list.html"
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "crud/product_detail.html"   
